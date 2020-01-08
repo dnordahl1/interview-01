@@ -11,7 +11,7 @@ namespace CSharp
         /// <summary>
         /// Consider this list of formats: https://ntsi.com/drivers-license-format/
         /// Validate Driver's license number, implement Nebraska and Mississippi in an expandable way to eventually handle all US states.
-        /// Fail validation if unpected data is passed in.
+        /// Fail validation if unexpected data is passed in.
         /// Nebraska: 1Alpha+6-8Numeric
         /// Mississippi: 9Numeric
         /// </summary>
