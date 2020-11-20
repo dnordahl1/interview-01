@@ -10,7 +10,7 @@ suite('LunchUtils', function () {
     test('getLunch', function () {
         let dow = [{ dow: 'Sunday' }, { dow: 'Monday' }, { dow: 'Tuesday' }]
         lunchUtils.getLunch(dow);
-        assert.equal(dow[0].getLunch(), 'pizza')
+        assert.equal(lunchUtils.getLunch(dow[0]), 'pizza')
     })
 });
 

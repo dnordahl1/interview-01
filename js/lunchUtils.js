@@ -6,25 +6,17 @@ let lunchUtils = (function () {
     function getDow(intDow) {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', "Saturday"];
 
-        // find the day that matches
-        days.forEach((day, index) => {
-            if (intDow == index)
-                return day;
-        })
-        return 'Unknown';
+		if (intDow > days.length || intDow < 0)
+			return 'Unknown';
+		else 
+			return days[intDow];
     }
 
     // return the correct lunch for the day of the week that is passed in
     function getLunch(dow) {
         const lunchMenus = ['pizza', 'burrito', 'taco', 'fish', 'haggis', 'burgers', 'tofurkey'];
 
-        // set the lunch for each day passed in
-        for (var i = 0; i < dow.length; i++) {
-
-            dow[i].getLunch = function () {
-                return lunchMenus[i];
-            }
-        }
+		return lunchMenus[getDow(dow)];
     }
 
     return {
