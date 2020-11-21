@@ -62,7 +62,7 @@ namespace CSharp
         public static List<int> EvenNumerics(List<string> input)
         {
             return input.Select(s => int.TryParse(s, out int i) ? i : 1 )  // return odd number for strings that are not integers
-                        .Where(i => i % 2 == 0)
+                        .Where(i => i % 2 == 0)                            // filter out odd numbers
                         .ToList();
         }
     }
